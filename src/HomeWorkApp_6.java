@@ -1,3 +1,8 @@
+//Дисциплина: Java.Уровень 1
+//Домашнее задание №: 6 "Продвинутое ООП"
+//Студент: Алексей Пирогов
+//Дата: 16.04.2021
+
 public class HomeWorkApp_6 {
 
     public static void main(String[] args) {
