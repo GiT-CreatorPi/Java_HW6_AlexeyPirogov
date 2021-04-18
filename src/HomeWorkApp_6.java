@@ -1,7 +1,7 @@
 //Дисциплина: Java.Уровень 1
 //Домашнее задание №: 6 "Продвинутое ООП"
 //Студент: Алексей Пирогов
-//Дата: 16.04.2021
+//Дата: 18.04.2021
 
 public class HomeWorkApp_6 {
 
@@ -16,23 +16,23 @@ public class HomeWorkApp_6 {
         firstCat.ageMonths = 103;   // инициализация экземпляра класса в части возраста
         firstCat.name = "Толик";    // инициализация экземпляра класса в части имени
         firstCat.show();
-        firstCat.voice("громко маяукнул!");
-        firstCat.run(0);
+        firstCat.voice("громко маяукнул!");     // вызов метода класса Animal
+        firstCat.run(0);    // вызов метода класса Animal
         System.out.println();
 
         System.out.println("Второй котэ: ");    //Создание экзмпляра класса с помощью параметризированного конструктора
         Cat secondCat = new Cat("Маркиза", false, "Дымчатая", 6);
         secondCat.show();       // метод для отображения информации о кошке
-        secondCat.voice("тихо мяукнула...");    // метод для взаимодействия экземпляра с пользователем
+        secondCat.voice("тихо мяукнула...");    // метод класса Animal для взаимодействия экземпляра с пользователем
         secondCat.run(200);     // метод отображающий передвижение экземпляра
         secondCat.swim(10);     // метод отображающий возможность (невозможность) плавать
-        secondCat.run(-200);
+        secondCat.run(-200);    // метод отображающий передвижение экземпляра в обратную сторону
         System.out.println();
 
         System.out.println("Третий котэ: ");
         Cat thirdCat = new Cat("Лейла", false, "Рыжая", 12);
-        thirdCat.show();
-        thirdCat.voice();
+        thirdCat.show();    // метод класса Animal
+        thirdCat.voice();   // метода класса Cat, переопределенный метод класса Animal
         thirdCat.swim(100);
         thirdCat.voice("зашипела ... Ш-ш-ш-ш...");
         thirdCat.run(-250);
@@ -55,12 +55,12 @@ public class HomeWorkApp_6 {
         Cat.getCountAnimals();
 
         System.out.println("\n--- Трагическая часть программы ... \n");
-        fifthCat.dead();            // метод экземпляра иллюстрирущий, что жизнь штука хорошая, но ограниченная некторым интервалом времени
+        fifthCat.deadAnimal();            // метод экземпляра иллюстрирущий, что жизнь штука хорошая, но ограниченная некторым интервалом времени
         Cat.getCountAnimals();      // метод класса Cat отражающий количество экземпляров класса
         Animal.getCountAnimals();   // метод класса Animal отражающий общее количество экземпляров класса, дочерних классов
 
         System.out.println();
-        firstCat.dead();
+        firstCat.deadAnimal();  // метод класса Cat, переопределённый метод класса Animal
         Cat.getCountAnimals();
         Animal.getCountAnimals();
 
@@ -110,7 +110,7 @@ public class HomeWorkApp_6 {
         System.out.println();
 
         System.out.println("\n--- Ещё одна трагическая часть программы ... \n");
-        fourthDog.dead();
+        fourthDog.deadAnimal();
         System.out.println();
 
         Dog.getCountAnimals();
@@ -119,7 +119,7 @@ public class HomeWorkApp_6 {
 
         System.out.println("\nИгра в некроманта:");
         firstCat.show();    // пример обращения к экземплярам класса существующих лишь в памяти, но не учитывающихся в классах
-        fourthDog.show();  // и родительском классе
+        fourthDog.show();   // и родительском классе
 
         Dog.getCountAnimals();
         Cat.getCountAnimals();
